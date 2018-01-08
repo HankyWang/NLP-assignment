@@ -5,7 +5,7 @@
 ------							
 	Keywords: 
 	Text Classification, Naive Bayes, K-Nearest Neighbours, Supported Vector Machine
-##Problem 1
+## Problem 1
 One of the main ML problems is text classification, which is used, for example, to detect spam, define the topic of a news article, or choose the correct mining of a multi-valued word.
 
 This data set contains 1000 text articles posted to each of 20 online newgroups, for a total of 20,000 articles. For documentation and download, see http://www-2.cs.cmu.edu/afs/cs/project/theo-11/www/naive-bayes.html.
@@ -15,8 +15,8 @@ To solve this problem, there are two major method.
 (2) Vectorize the document using tf-idf representation. Then apply vector-supported machine learning algorithm to do classification, such algorithms can be SVM, KNN and Decision Tree,etc.
 
 
-##Usage
-###Software Requirement
+## Usage
+### Software Requirement
 ~~~
 python 2.7.12 
 sklearn=0.19
@@ -25,49 +25,49 @@ nltk=3.2
 ~~~
 
 
-###Source Code
+### Source Code
 [Jupyter Notebook](classifier.ipynb)       
 
 [text-classification.py](classification.py)
 
-##Dataset 
+## Dataset 
 
 This data set contains 1000 text articles posted to each of 20 online newgroups, for a total of 20,000 articles.
 
 The content of the dataset is almost all mail-styled with header of enormous length.
 
-##Preprocessing
+## Preprocessing
 
 In order to eliminating the disturbing factors of the text content and further reduce the length of the word bank only to preserve the useful words. The preprossing is carried out by the following steps:
 
-###(1) Remove the useless header.       
+### (1) Remove the useless header.       
 The information in the header is uninformative.  
 
-###(2) Remove the word in e-mail style or contains more than one digit.     
+### (2) Remove the word in e-mail style or contains more than one digit.     
 Words in both styles can be considered with no information.
 
-###(3) Remove the stopwords
+### (3) Remove the stopwords
 
-###(4) Word Stemming.
+### (4) Word Stemming.
 After applying a NLTK supported Word Net Stemming API, the length of word bank is reduced to about 25,000 comparing to a 90,000 before stemming and other preprecessing steps.
 
-###(5) Document Vectorization
+### (5) Document Vectorization
 Using tf-idf with Laplace Smoothing to find the vector representation of a document. 
 
-##Algorithms and Models 
+## Algorithms and Models 
  
-###(1) Naive Bayes
+### (1) Naive Bayes
 First, apply **maximum likelihood estimation** to compute the posterior probablities of words in text classes.   
 Then, compute the probablity to get the maximum probablity and its corresponding label.
 
-###(2) K-Nearest Neighbors
+### (2) K-Nearest Neighbors
 Training step:     
 Record all X and Y on the training set.
 
 Test Step:      
 Find the k nearest neighbor to represent the vector which determines the label of the testing sample
 
-###(3) Support Vector Machine
+### (3) Support Vector Machine
 
 Find a hyperplane to seperate the vector space into two classes. When applying to multiclass classification problem. It is considered to separate several times.
 
@@ -84,7 +84,7 @@ Find a hyperplane to seperate the vector space into two classes. When applying t
 
 
 
-##Analysis
+## Analysis
 From the charts showed above, the Naive Bayes models and SVM model perform almost equally on this dataset. For 75% accuracy almost reached the theoretical limit of Naive Bayes. 
 
 While training on the SVM model, input shape of (19997,25000) is almost infinite time to training to classify between 20 classes. 
