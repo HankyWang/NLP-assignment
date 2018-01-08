@@ -5,25 +5,25 @@
 ------							
 	Keywords: 
 	Naive Bayes, Sentiment Analysis
-##Problem 1
+## Problem 1
 Generally speaking, sentiment analysis aims to determine the attitude of a document. In this task, the goal is to be able to tell whether the review is positive or negative.
 
 In this experiment, to solve this two-class classification problem, the thought is to deploy a **Naive Bayes Model** to compute the posterior probablities of words shows in the dataset.
 
 
-##Usage
-###Software Requirement
+## Usage
+### Software Requirement
 ~~~
 python 2.7.6
 numpy=1.12
 nltk=3.2
 ~~~
 
-###Source Code
+### Source Code
 [naive-bayes.py](naive_bayes.py)
 
 
-##Algorithms and Models
+## Algorithms and Models
 
 Naive Bayes is a prbablity-based model to classify the dataset. The model is based on Bayes' Theorem.
 
@@ -56,7 +56,7 @@ To test the accuracy on this model, I pull out a 5-fold cross-validation.
 | 4 | 76.5947 %            | 76.3133 %                |
 | 5 | 76.1949 %            | 75.6794 %                |
 
-##Analysis and Conclusion
+## Analysis and Conclusion
 From the charts showed above, the model that didn't remove the stopwords is doing slight better. The possible explaination may be that the distribution of stopwords on this dataset is uneven.
 
 Overall, the accuracy on this dataset is slightly higher than what is expected to see with Naive Bayes Model by several paper. It may because the preprocessing method is working. And it helps with the classification.
