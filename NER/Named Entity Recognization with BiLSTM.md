@@ -5,8 +5,8 @@
 ------							
 	Keywords: 
 	NER, LSTM, BiLSTM
-##Problem 4 Name Entity Recognization
-###Problem Description
+## Problem 4 Name Entity Recognization
+### Problem Description
 Named Entity Recognition is a subtask of information extraction that seeks to locate and classify named entities in text into pre-defined categories such as the names of persons, organizations, locations, expressions of times, quantities, monetary values, percentages.
 
 Our objective is to build a machine learning named entity recognition system, which when given a new previously unseen text can identify and classify the named entities in the text. This means that your system should annotate each word in the text with one of the four possible classes. 
@@ -26,12 +26,12 @@ numpy=1.12
 gensim=2.3.0
 tensorflow=1.1.0
 ~~~
-###Dataset
+### Dataset
 
 CoNLL 2002 IOB Tags Dataset.     
 [ner-dataset.csv](ner_dataset.csv)     
 
-##Source Code
+## Source Code
 
 **[Jupyter Notebook](ner-lstm.ipynb)**    
 Ipython notebook with interactive APIs.     
@@ -52,7 +52,7 @@ The training output dim is the one-hot representation of the named-entites.
 
 In this way, we get a model of input dim as (size,104,100) and output dim as (size,104,9)
 
-##Algorithms and Models
+## Algorithms and Models
 
 The model of BiLSTM consists of three layers, the first layer is a bidirectional LSTM layer, the following layer is a dropout layer, and the last layer is a full-connected layer used as softmax classification.
 
@@ -77,7 +77,7 @@ ner_model.compile(loss='categorical_crossentropy', optimizer='adam',
 Loss function: categorical cross entropy
 Optimizer: Adam
 
-##Training and Test details
+## Training and Test details
 Model are trained and tested on CPU
 
 Epoch=5 , Batch_size=200
@@ -119,7 +119,7 @@ And we got the tagged sequence of
 ~~~
 The tag is basically all right except for ('World','O')
 
-##Analysis
+## Analysis
 
 We can see that the BiLSTM model is doing extremely well on conll2002 dataset. For one thing, this model is one of the most state-of-art method to solve named entity recognition problem.
 
