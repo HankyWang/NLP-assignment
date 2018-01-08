@@ -5,14 +5,14 @@
 ------							
 	Keywords: 
 	Hidden Markov Model, POS, Part-of-Speech Tagging
-##Problem 1
-###Intro: 
+## Problem 1
+### Intro: 
 
 Design a sequence learning method to predicate a POS tags for each word in sentences.
  
 Using 80% of the dataset as the training set and 20% as the test set.
 
-##Datasets
+## Datasets
 In this assignment, we select two datasets:
 
 * UPENN Treebank 5290.  
@@ -26,20 +26,20 @@ In this assignment, we select two datasets:
 >[PKU dataset](dataset.txt)
 
 
-##Usage
+## Usage
 ~~~
 python hmm.py [--dataset treebank|pku]
 ~~~
 By default, the program takes pku dataset as input with accuracy output.
 
 
-##Environment
-###Software Requirements
+## Environment
+### Software Requirements
 ~~~
 python 2.7.10  
 numpy>=0.9
 ~~~
-###Source Code
+### Source Code
 
  [hmm.py](hmm.py)      
 
@@ -49,7 +49,7 @@ On the treebank dataset, the word consists of all digits are considered as *numb
 
 On the PKU dataset, the word with date and digits are processed seperately to match the tag in both training and test steps.
 
-##Algorithms and Models
+## Algorithms and Models
 In this assignment, I select Hidden Markov Model to solve the POS problem.  
  
 ~~~
@@ -67,11 +67,11 @@ Then Viterbi Algorithm is applied to compute the best predicted seqence of hidde
 ![viterbi](viterbi.png)
 
 ## Perfomances and Benchmarks
-###On dataset Treebank.5290.   
+### On dataset Treebank.5290.   
 Test Accuracy: 89.2363 %.   
 Training Accuracy: 95.3124 %
 
-###On dataset PKU:
+### On dataset PKU:
 For the training set and test set are randomly selected.
 
 |   	| Training Accuracy 	| Test Accuracy 	|
@@ -84,7 +84,7 @@ For the training set and test set are randomly selected.
 
 
 
-##Result Analysis
+## Result Analysis
 We can detect the slightly difference in accuracy in two dataset. Firstly, the treebank dataset is an English dataset for the words in the dataset is segmented by detecting space in between words, the ambiguity in a language is unavoidable. While in the PKU dataset the word are already segmented to do part-of-speech tagging, the ambiguity of word reduces to some extent. It helps explain why the same method is doing better with a Chinese dataset than an English one.
 
 ##Conclusion
