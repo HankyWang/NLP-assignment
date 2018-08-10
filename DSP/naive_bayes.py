@@ -3,7 +3,8 @@ import numpy as np
 import nltk
 from nltk.corpus import stopwords
 
-#adding cross-validation
+#adding cross-validationn
+#nonsense
 
 def naive_bayes(train_pos,train_neg,test_pos,test_neg,stopword_toggle=1):
     stop=set([word.encode('ascii') for word in stopwords.words('english')])
